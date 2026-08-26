@@ -103,7 +103,7 @@ final class ProductiveMetalworksRenderer implements BlockRenderer {
         String blockId = block.getBlockState().getId().getFormatted();
         Integer moltenTint = ProductiveMetalworksCatalog.fluidTint(blockId);
         if (moltenTint != null) {
-            emitter.moltenCube(block, target, moltenTint, mapColor);
+            emitter.moltenFluid(block, target, moltenTint, mapColor);
             return true;
         }
         if (ProductiveMetalworksCatalog.window(blockId)) {

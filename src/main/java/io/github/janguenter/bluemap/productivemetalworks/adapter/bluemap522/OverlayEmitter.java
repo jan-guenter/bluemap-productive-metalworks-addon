@@ -10,7 +10,9 @@ import de.bluecolored.bluemap.core.resources.pack.resourcepack.texture.Texture;
 import de.bluecolored.bluemap.core.util.Direction;
 import de.bluecolored.bluemap.core.util.Key;
 import de.bluecolored.bluemap.core.util.math.Color;
+import de.bluecolored.bluemap.core.world.BlockState;
 import de.bluecolored.bluemap.core.world.block.BlockNeighborhood;
+import de.bluecolored.bluemap.core.world.block.ExtendedBlock;
 
 /** Emits textured fluid layers, bars, and connected full-cube window faces. */
 final class OverlayEmitter {
@@ -79,17 +81,152 @@ final class OverlayEmitter {
         addMapColor(texture, tint, mapColor);
     }
 
-    void moltenCube(
+    void moltenFluid(
             BlockNeighborhood block,
             TileModelView target,
             int tint,
             Color mapColor
     ) {
-        fluidBox(block, target, ProductiveMetalworksCatalog.MOLTEN_TEXTURE, tint,
-                0F, 0F, 0F, 1F, 1F, 1F, mapColor);
-        quad(block, target, ProductiveMetalworksCatalog.MOLTEN_TEXTURE, Direction.DOWN,
-                0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 1F, 0F, 0F, 1F,
+        BlockState state = block.getBlockState();
+        float northWest;
+        float southWest;
+        float northEast;
+        float southEast;
+        int level = state.getLiquidLevel();
+        if (level < 8 && !(level == 0 && sameFluid(state, block.getNeighborBlock(0, 1, 0)))) {
+            northWest = cornerHeight(block, state, -1, -1);
+            southWest = cornerHeight(block, state, -1, 0);
+            northEast = cornerHeight(block, state, 0, -1);
+            southEast = cornerHeight(block, state, 0, 0);
+        } else {
+            northWest = 1F;
+            southWest = 1F;
+            northEast = 1F;
+            southEast = 1F;
+        }
+
+        fluidFace(block, target, state, ProductiveMetalworksCatalog.MOLTEN_TEXTURE,
+                Direction.DOWN,
+                0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 1F, 0F, 0F, 1F, tint);
+        boolean top = fluidFace(block, target, state,
+                flowingSurface(block, state)
+                        ? ProductiveMetalworksCatalog.MOLTEN_FLOW_TEXTURE
+                        : ProductiveMetalworksCatalog.MOLTEN_TEXTURE,
+                Direction.UP,
+                0F, southWest, 1F, 1F, southEast, 1F,
+                1F, northEast, 0F, 0F, northWest, 0F, tint);
+        fluidFace(block, target, state, ProductiveMetalworksCatalog.MOLTEN_FLOW_TEXTURE,
+                Direction.NORTH,
+                1F, 0F, 0F, 0F, 0F, 0F,
+                0F, northWest, 0F, 1F, northEast, 0F, tint);
+        fluidFace(block, target, state, ProductiveMetalworksCatalog.MOLTEN_FLOW_TEXTURE,
+                Direction.SOUTH,
+                0F, 0F, 1F, 1F, 0F, 1F,
+                1F, southEast, 1F, 0F, southWest, 1F, tint);
+        fluidFace(block, target, state, ProductiveMetalworksCatalog.MOLTEN_FLOW_TEXTURE,
+                Direction.WEST,
+                0F, 0F, 0F, 0F, 0F, 1F,
+                0F, southWest, 1F, 0F, northWest, 0F, tint);
+        fluidFace(block, target, state, ProductiveMetalworksCatalog.MOLTEN_FLOW_TEXTURE,
+                Direction.EAST,
+                1F, 0F, 1F, 1F, 0F, 0F,
+                1F, northEast, 0F, 1F, southEast, 1F, tint);
+
+        if (top) {
+            addMapColor(ProductiveMetalworksCatalog.MOLTEN_TEXTURE, tint, mapColor);
+        }
+    }
+
+    @SuppressWarnings("checkstyle:ParameterNumber")
+    private boolean fluidFace(
+            BlockNeighborhood block,
+            TileModelView target,
+            BlockState state,
+            Key texture,
+            Direction direction,
+            float ax, float ay, float az,
+            float bx, float by, float bz,
+            float cx, float cy, float cz,
+            float dx, float dy, float dz,
+            int tint
+    ) {
+        var offset = direction.toVector();
+        ExtendedBlock neighbor = block.getNeighborBlock(
+                offset.getX(), offset.getY(), offset.getZ()
+        );
+        if (sameFluid(state, neighbor)
+                || (direction != Direction.UP && neighbor.getProperties().isCulling())) {
+            return false;
+        }
+        quad(block, target, texture, direction,
+                ax, ay, az, bx, by, bz, cx, cy, cz, dx, dy, dz,
                 0F, 0F, 1F, 1F, tint);
+        return true;
+    }
+
+    private static float cornerHeight(
+            BlockNeighborhood block,
+            BlockState state,
+            int x,
+            int z
+    ) {
+        for (int dx = x; dx <= x + 1; dx++) {
+            for (int dz = z; dz <= z + 1; dz++) {
+                if (sameFluid(state, block.getNeighborBlock(dx, 1, dz))) {
+                    return 1F;
+                }
+            }
+        }
+
+        float sum = 0F;
+        int count = 0;
+        for (int dx = x; dx <= x + 1; dx++) {
+            for (int dz = z; dz <= z + 1; dz++) {
+                ExtendedBlock neighbor = block.getNeighborBlock(dx, 0, dz);
+                BlockState neighborState = neighbor.getBlockState();
+                if (sameFluid(state, neighbor)) {
+                    if (neighborState.getLiquidLevel() == 0) {
+                        return 14F / 16F;
+                    }
+                    sum += baseHeight(neighborState.getLiquidLevel());
+                    count++;
+                } else if (neighborState.isAir()) {
+                    count++;
+                }
+            }
+        }
+        return sum == 0F || count == 0 ? 3F / 16F : sum / count;
+    }
+
+    static float baseHeight(int level) {
+        return level >= 8 ? 1F : (14F - level * 1.9F) / 16F;
+    }
+
+    private static boolean flowingSurface(BlockNeighborhood block, BlockState state) {
+        float own = baseHeight(state.getLiquidLevel());
+        if (own > 0.8F) {
+            return false;
+        }
+        return differentFluidHeight(block, state, own, -1, 0)
+                || differentFluidHeight(block, state, own, 1, 0)
+                || differentFluidHeight(block, state, own, 0, -1)
+                || differentFluidHeight(block, state, own, 0, 1);
+    }
+
+    private static boolean differentFluidHeight(
+            BlockNeighborhood block,
+            BlockState state,
+            float own,
+            int dx,
+            int dz
+    ) {
+        ExtendedBlock neighbor = block.getNeighborBlock(dx, 0, dz);
+        return sameFluid(state, neighbor)
+                && Math.abs(baseHeight(neighbor.getBlockState().getLiquidLevel()) - own) > 0.0001F;
+    }
+
+    private static boolean sameFluid(BlockState state, ExtendedBlock neighbor) {
+        return state.getId().equals(neighbor.getBlockState().getId());
     }
 
     void energyBar(
