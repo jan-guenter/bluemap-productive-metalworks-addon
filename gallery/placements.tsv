@@ -1,2 +1,20 @@
-case_id	label	x	y	z	block_state	expected
-stock-control	stone stock rendering control	176	100	175	minecraft:stone	stock-visible
+case_id	label	x	y	z	block_state	block_nbt	expected
+table-empty	empty casting table	160	100	160	productivemetalworks:casting_table[facing=north]		stock-only
+table-filled	half-full casting table	162	100	160	productivemetalworks:casting_table[facing=north]	{fluid:{Fluid:{id:"productivemetalworks:molten_iron",amount:500}},maxAmount:1000,coolingTime:0}	molten-surface
+basin-filled	three-quarter casting basin	164	100	160	productivemetalworks:casting_basin[facing=north]	{fluid:{Fluid:{id:"productivemetalworks:molten_iron",amount:750}},maxAmount:1000,coolingTime:0}	molten-surface
+tank-empty	empty red tank	166	100	160	productivemetalworks:red_foundry_tank[facing=north]		stock-only
+tank-half	half-full blue tank	168	100	160	productivemetalworks:blue_foundry_tank[facing=north]	{fluid:{Fluid:{id:"productivemetalworks:molten_copper",amount:2000}}}	molten-volume-half
+tank-full	full green tank	170	100	160	productivemetalworks:green_foundry_tank[facing=north]	{fluid:{Fluid:{id:"productivemetalworks:molten_emerald",amount:4000}}}	molten-volume-full
+capacitor-empty	empty black capacitor	160	100	163	productivemetalworks:black_foundry_capacitor[facing=north]	{energy:0}	stock-only
+capacitor-half	half-full red capacitor	162	100	163	productivemetalworks:red_foundry_capacitor[facing=north]	{energy:20000}	power-bar-half
+capacitor-full	full green capacitor	164	100	163	productivemetalworks:green_foundry_capacitor[facing=north]	{energy:40000}	power-bar-full
+tap-basin	active tap destination basin	168	100	163	productivemetalworks:casting_basin[facing=north]	{fluid:{Fluid:{id:"productivemetalworks:molten_iron",amount:750}},maxAmount:1000,coolingTime:0}	molten-surface
+tap-active	active molten tap	168	101	163	productivemetalworks:foundry_tap[facing=north]	{isActive:1b,fluidId:1}	molten-stream
+molten-iron	molten iron tint	160	100	166	productivemetalworks:molten_iron		exact-fluid-tint
+molten-emerald	molten emerald tint	162	100	166	productivemetalworks:molten_emerald		exact-fluid-tint
+molten-redstone	molten redstone tint	164	100	166	productivemetalworks:molten_redstone		exact-fluid-tint
+molten-refined-obsidian	molten refined obsidian tint	166	100	166	productivemetalworks:molten_refined_obsidian		exact-fluid-tint
+window-red-lower	mixed window red lower	169	100	166	productivemetalworks:red_foundry_window[facing=north]		shared-faces-culled
+window-blue-lower	mixed window blue lower	170	100	166	productivemetalworks:blue_foundry_window[facing=north]		shared-faces-culled
+window-green-upper	mixed window green upper	169	101	166	productivemetalworks:green_foundry_window[facing=north]		shared-faces-culled
+window-yellow-upper	mixed window yellow upper	170	101	166	productivemetalworks:yellow_foundry_window[facing=north]		shared-faces-culled

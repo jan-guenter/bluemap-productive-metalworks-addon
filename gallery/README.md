@@ -1,11 +1,12 @@
-# Placeholder gallery
+# Productive Metalworks staging gallery
 
-This generated gallery proves only the deterministic data-pack mechanics and a
-single `minecraft:stone` stock control at `(176, 100, 175)`. It does not claim
-Productive Metalworks support.
+This generated gallery is the bounded fixture used for the exact Productive
+Metalworks `1.21.1-1.15.1` comparison. Its 19 cases cover casting surfaces,
+empty and filled tanks, capacitor gauges, an active tap, four molten-fluid
+tints with naturally scheduled level states, and a connected mixed-dye window
+cluster. The clear envelope is x `159..173`, y `99..103`, z `159..169`.
 
-Replace `cases.py` with the smallest real defect fixture and stock controls,
-then keep the stable commands:
+Stable commands:
 
 ```bash
 python gallery/generate.py
@@ -14,6 +15,5 @@ python gallery/lint.py
 bash gallery/package.sh /tmp/productivemetalworks-gallery.zip
 ```
 
-The release gate rejects the `SCAFFOLD_NOT_IMPLEMENTED` marker in `cases.py`.
 Keep gallery generation deterministic, bounded, synthetic where practical, and
 free of candidate assets or captured meshes.

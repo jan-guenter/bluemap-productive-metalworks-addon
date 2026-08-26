@@ -60,6 +60,14 @@ public final class ExactArtifactDetector {
         return true;
     }
 
+    /** Returns the one exact declaring JAR for a pin, or null on any ambiguity. */
+    public static Path findExact(Iterable<Path> roots, ArtifactPin pin) {
+        Objects.requireNonNull(roots, "roots");
+        Objects.requireNonNull(pin, "pin");
+        List<Path> bounded = boundedRoots(roots);
+        return bounded == null ? null : findOne(bounded, pin);
+    }
+
     private static List<Path> boundedRoots(Iterable<Path> roots) {
         List<Path> result = new ArrayList<>();
         for (Path root : roots) {
