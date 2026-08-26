@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    {
+      "curseforge_file": 8558526,
+      "curseforge_project": 1184570,
+      "download_url": "https://www.curseforge.com/api/v1/mods/1184570/files/8558526/download",
+      "evidence": "All the Mons 1.2.0 ServerFiles runtime member, SHA-1-correlated runtime inventory, and exact pack manifest association",
+      "evidence_tier": "T2_ARTIFACT_EXACT",
+      "file_name": "productivemetalworks-1.21.1-1.15.1.jar",
+      "key": "productiveMetalworks",
+      "license": "All Rights Reserved",
+      "mod_id": "productivemetalworks",
+      "redistributed": false,
+      "sha1": "56fb61c28d5a1d053ae26abb3042bbfd75110c79",
+      "sha256": "100132424f9659b76fd1326a8f0068a58b91d6d94351d47484b5b9cee394e812",
+      "size": 3033210,
+      "version": "1.21.1-1.15.1"
+    }
+  ],
+  "bluemap": {
+    "api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971",
+    "commit": "9be321df995a1103808621d529eb72773e719d4d",
+    "license": "MIT",
+    "redistributed": false,
+    "version": "5.22-agent.backport-5.22-mc1.21.1-2"
+  },
+  "pack": {
+    "commit": "c7bb230f21d14d26859d0b92548f089b3a493ad9",
+    "minecraft": "1.21.1",
+    "name": "All the Mons",
+    "neoforge": "21.1.248",
+    "version": "1.2.0"
+  },
+  "profile": "productivemetalworks-1.21.1-1.15.1",
+  "schema": 1,
+  "source_use": "Runtime interfaces and installed resources may be interpreted only after family-specific evidence is recorded; no candidate classes, assets, binaries, source, or captured meshes are packaged."
+}

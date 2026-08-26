@@ -1,0 +1,6 @@
+{
+  "id": "bluemap-productivemetalworks",
+  "entrypoint": "io.github.janguenter.bluemap.productivemetalworks.BlueMapProductiveMetalworksAddon",
+  "dependencies": [],
+  "soft-dependencies": []
+}

@@ -1,0 +1,379 @@
+{
+  "deterministic": true,
+  "family_id": "productivemetalworks",
+  "generator": "bluemap-java21-addon-scaffold-v1",
+  "initial_files": [
+    {
+      "mode": "0644",
+      "path": ".gitattributes",
+      "sha256": "c0b5802900ed076871e7878f051eb2cd8d7918dbfada3f40f86300fa7325252d",
+      "size": 58
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "0ccfd8fa7ce46ffb9e355579d2af041d44cc0ae858c9f50e8dca7400f1953b12",
+      "size": 4466
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/release.yml",
+      "sha256": "1aada5d58822e47dd997b91213b79bae5ac4fb56e5ea7fef7e9ed30beb741dba",
+      "size": 6635
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "a5030053f21da04c319ab8abe4020d2ee1d488430e79f0b8ce04f1d7f29a93f6",
+      "size": 105
+    },
+    {
+      "mode": "0644",
+      "path": "AGENTS.md",
+      "sha256": "ac89687ee831b16f1bd9d5a01c90c6a8dc3d68d9af438dc53fbff223c60bcdc1",
+      "size": 2145
+    },
+    {
+      "mode": "0644",
+      "path": "CHANGELOG.md",
+      "sha256": "4d741335efcbd8c43ef80e23de5f027278ebb932ceefe45963609a580f6d2bc9",
+      "size": 216
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "f079a10f7ddfae72170c16c8be18685f05e36309955c3858e9f863d4cae7cfce",
+      "size": 1068
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE-BlueMap",
+      "sha256": "f1c190d4a1ff29606cbed7a0d97fc7b7117cc2e1169e19caa753198957dbbfd6",
+      "size": 1122
+    },
+    {
+      "mode": "0644",
+      "path": "NOTICE.md",
+      "sha256": "05445da121c98ca6b6054f606936517fe3b59df0074f1289330732a6a68cd2ae",
+      "size": 436
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "a9e0d3fd334ee1ab086effad41ae3adc4245f12b2ffdc0d6aae6735f3855c418",
+      "size": 1581
+    },
+    {
+      "mode": "0644",
+      "path": "THIRD_PARTY.md",
+      "sha256": "e1223710e48b39e8d27a8cec2757ddf77b4d5a902a41821845c12ec6f036d6a3",
+      "size": 634
+    },
+    {
+      "mode": "0644",
+      "path": "build.gradle",
+      "sha256": "bde2cdba802f0633d219e3ec1097d5b8bb5fd75ca9fe13c92484b90ce32a4e52",
+      "size": 19792
+    },
+    {
+      "mode": "0644",
+      "path": "config/checkstyle/checkstyle.xml",
+      "sha256": "77fe7b6d9a70f527daf7288ad2955e467f1059ef75b0c3d0d63694c8bea285d7",
+      "size": 791
+    },
+    {
+      "mode": "0644",
+      "path": "docs/EXECUTION.md",
+      "sha256": "db21f4a6d70fbe4af5d3aa46431aa0e258da14d8aae6c427ebc39718ab4cf5e4",
+      "size": 2085
+    },
+    {
+      "mode": "0644",
+      "path": "docs/RELEASING.md",
+      "sha256": "7488e66595e35648c172f99f43104e5dc8bdc99569a106b25bb628ef7f4b4b5d",
+      "size": 1522
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/README.md",
+      "sha256": "fdbb91e82ef840386daad95b1f5d1406bb51407ec8e107da12d2806cc7b436a3",
+      "size": 684
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/SHA256SUMS",
+      "sha256": "29aac762d532b531b48c386610fd6917b0fe251e0e5e0ea819dc1a8190ffceb6",
+      "size": 959
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/cases.py",
+      "sha256": "2e45e8c5186ce8ce5b30eb5a76ec3f72176065eb1a221cf03c78980b56c2e913",
+      "size": 774
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/minecraft/tags/function/load.json",
+      "sha256": "38e1c876c3107b3839d22fbed34460a1f3ac99b19d7afe53adca824f34428d70",
+      "size": 62
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/productivemetalworks_gallery/function/build.mcfunction",
+      "sha256": "9119fbbf7d6f4de67eb095a9888dbd7b0fb0d094c1585675d74989bc361024cd",
+      "size": 222
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/productivemetalworks_gallery/function/clear.mcfunction",
+      "sha256": "4507683d949af7e2312781de5e2ef0cb5d090ff6584e08f003a406bb4586b5d3",
+      "size": 91
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/productivemetalworks_gallery/function/load.mcfunction",
+      "sha256": "3319d81b403e54bf3526a6dd35c9b344da8b67845cafe67930dbbfb5a8d0650a",
+      "size": 187
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/productivemetalworks_gallery/function/release.mcfunction",
+      "sha256": "5c0582d61b51b0be2d3ddae8a88e695eccb38c3ac149d3e13360ab15551d3109",
+      "size": 93
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/productivemetalworks_gallery/function/verify.mcfunction",
+      "sha256": "a949e5b4d97d7d5a0adbafb3b81599f85ab4e8aa46a0c8f1f17e78a1aeaf3743",
+      "size": 259
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/pack.mcmeta",
+      "sha256": "984d16666c2189a9d6858748c34e2a69271254403f7752d09e9f0e53a51d0891",
+      "size": 116
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/generate.py",
+      "sha256": "37b71771bebfc59ee615f1106d773bcc7a54396042dd482949cc2c2faa78e3d8",
+      "size": 4835
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/lint.py",
+      "sha256": "b970deb190d8597b0b0c07429be2898edd5bad6cef5c35e0f5b4bdfad7d58982",
+      "size": 2469
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/package.sh",
+      "sha256": "c7d87eaacd2c9e1fb30c5bd0a3fc8437242b3cc432b2639def69978a97b22754",
+      "size": 1328
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/placements.tsv",
+      "sha256": "b56ee047c4aa36d26a7ca29b867a4bee61e3fa5aa25f0c4247ee46ca07cff797",
+      "size": 127
+    },
+    {
+      "mode": "0644",
+      "path": "gradle.properties",
+      "sha256": "d4a4b72f5c151c7d71d69cffde553bc484a445e5a5f2175ae36fb084c44221c1",
+      "size": 626
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/release.json",
+      "sha256": "587a70867def73dae148260121e3fe83248b62aee7cfb6ba17b64a036ff71847",
+      "size": 377
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/upstreams.json",
+      "sha256": "2816d0ad7c13f8b127c2a27ac224b7d977a7d6fbfb257f936e9e62e62f6ec9ab",
+      "size": 1494
+    },
+    {
+      "mode": "0644",
+      "path": "settings.gradle",
+      "sha256": "b548fb1fec65c042bf16318170d5320306ffb9b5a82b51e71fa11b37be43b7f8",
+      "size": 1440
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/BlueMapProductiveMetalworksAddon.java",
+      "sha256": "cf2dc4ed27933a77685e4214aea1c00ade1ad83e4e00113d3559ac531f6cf904",
+      "size": 1617
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/activation/AddonRuntime.java",
+      "sha256": "5113a25315340e5e6eeeab37cc40d4774466e4c8b0497907c0966032f4212459",
+      "size": 2180
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/AdapterCompatibility.java",
+      "sha256": "dbb2e817af1a5f9d4cac56ba791b3b43d552ac765877de924d4098779d5561e5",
+      "size": 1050
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/BlueMap522Adapter.java",
+      "sha256": "86ab754c4d1dfddb5f4e04717b2ee404b21232784d18d2bdabfa06e27811f097",
+      "size": 1160
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/ProfileResourceExtension.java",
+      "sha256": "ba309a9867d3aa090e137e416211067077933eccedf9271d0bb377ff4ab04b07",
+      "size": 1772
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/ProfileResourceExtensionType.java",
+      "sha256": "3ee676f51c6f178d22cd49ea62a6fe9f3423947a365b67ba8f22f3a33d5b7f01",
+      "size": 957
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/RegistryGuard.java",
+      "sha256": "82cda8dce5f5153b6e5d782cb8451ce1927ce2e0102e7d37f45dccdc10b4f5ff",
+      "size": 887
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/profile/ArtifactPin.java",
+      "sha256": "57b05b2938807114a555b2884d1b707e2a9dbcf00d024fc9ce9106f8d175190c",
+      "size": 1382
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/profile/ExactArtifactDetector.java",
+      "sha256": "912392603af45aaa30d106040cb36ec4ae486e10c169000d6c5dc9972f3a0fab",
+      "size": 9973
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/productivemetalworks/profile/ProductiveMetalworks1151Profile.java",
+      "sha256": "4be816d115e3cc9b7e007ceaefa547cc2edb64ac8f33665231b6560b7920dab0",
+      "size": 822
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/resources/bluemap.addon.json",
+      "sha256": "77afae2d6c89cc305845d54af88c204856ad3e41d7067a38dceafd2731784b7a",
+      "size": 194
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/productivemetalworks/activation/AddonRuntimeTest.java",
+      "sha256": "6439457df364c6beae5b19c8c1eb282c47939802dcdc2e30acd93550e3f3847c",
+      "size": 1086
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/productivemetalworks/adapter/bluemap522/AdapterCompatibilityTest.java",
+      "sha256": "8ee36e2a127f5859926e50721f87df95d257d4075c9e2cbf907c97ae327ac319",
+      "size": 974
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/productivemetalworks/profile/ExactArtifactDetectorTest.java",
+      "sha256": "3e6863b4dceb2f4ef73b8f12be4874ebafc8d8acf35263cb29de9c36a7865c48",
+      "size": 3435
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_pinned_artifacts.py",
+      "sha256": "dc7c6d80796f9d5773183a499aa61320a0126ac21f1fdb5c8e872bbf618ca798",
+      "size": 3508
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_staged_equivalence.py",
+      "sha256": "cc8fa6cb1e79b85555b9f10920909b0c03fdc8d78445e07c877674e513fcff9f",
+      "size": 4441
+    }
+  ],
+  "repository": "bluemap-productive-metalworks-addon",
+  "schema": 1,
+  "spec_sha256": "4a7ed77502f10d776898b09152457bb79fdbd50c733b3435ac8fad6b959aba69",
+  "steps": [
+    {
+      "description": "Validate the reviewed scaffold spec.",
+      "id": "validate-spec",
+      "number": 1,
+      "status": "complete"
+    },
+    {
+      "description": "Render and byte-audit the deterministic seed.",
+      "id": "render-seed",
+      "number": 2,
+      "status": "complete"
+    },
+    {
+      "description": "Initialize the independent child repository and feature branch.",
+      "id": "initialize-repository",
+      "number": 3,
+      "status": "pending"
+    },
+    {
+      "description": "Acquire exact candidate artifacts outside Git and verify their identities.",
+      "id": "acquire-artifacts",
+      "number": 4,
+      "status": "pending"
+    },
+    {
+      "description": "Verify Java 21 and exact BlueMap, API, pack, and loader pins.",
+      "id": "verify-baseline",
+      "number": 5,
+      "status": "pending"
+    },
+    {
+      "description": "Implement family-owned registration, profile, decoder, and renderer.",
+      "id": "implement-family",
+      "number": 6,
+      "status": "pending"
+    },
+    {
+      "description": "Add focused compatibility, decoder, geometry, and fallback tests.",
+      "id": "focused-tests",
+      "number": 7,
+      "status": "pending"
+    },
+    {
+      "description": "Replace the stock-only gallery with the smallest defect fixture.",
+      "id": "defect-gallery",
+      "number": 8,
+      "status": "pending"
+    },
+    {
+      "description": "Build a prototype and deploy it promptly to disposable staging.",
+      "id": "stage-prototype",
+      "number": 9,
+      "status": "pending"
+    },
+    {
+      "description": "Obtain owner comparison and visual acceptance in client and BlueMap.",
+      "id": "owner-acceptance",
+      "number": 10,
+      "status": "pending"
+    },
+    {
+      "description": "Seal staging and publication identities and run the release gate.",
+      "id": "seal-release",
+      "number": 11,
+      "status": "pending"
+    },
+    {
+      "description": "Merge, tag, publish, verify, and update root coordination.",
+      "id": "publish-coordinate",
+      "number": 12,
+      "status": "pending"
+    }
+  ],
+  "template_sha256": "96f6497d2ea982ea702c0208ddf202393bb331b1b24f6600bd9a328ca62f4540"
+}
