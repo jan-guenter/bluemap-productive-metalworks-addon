@@ -1,27 +1,22 @@
 # Releasing
 
-Prototype work is intentionally light. Before owner acceptance, run only the
-focused Java checks, exact candidate verifier, gallery checks, and disposable
-staging comparison needed to get useful visual feedback.
+The BlueMap 5.23 migration remains unpublished until its exact candidate has
+passed the combined integration gallery and owner review.
 
 After the owner accepts the candidate:
 
-1. Remove every unresolved scaffold marker and confirm the accepted bounded
-   gallery fixture.
-2. Freeze the accepted staging JAR's non-manifest entry hashes in
-   `provenance/accepted-staging-entries.sha256` with the one-time
-   `bluemap-addon-toolkit jar-entries write` command.
-3. Change `addon_version` from the SNAPSHOT to its final version through a PR.
-4. Build production JAR, sources JAR, POM, and Gradle module metadata with the
+1. Confirm the accepted bounded gallery fixture.
+2. Build production JAR, sources JAR, POM, and Gradle module metadata with the
    exact promotion Java/Gradle/BlueMap inputs.
-5. Put their exact sizes and SHA-256 values in `gradle.properties` and complete
+3. Put their exact sizes and SHA-256 values in `gradle.properties` and complete
    `provenance/release.json`.
-6. Run `verifyReleaseCandidate -PreleaseTag=v<version>` with all exact candidate
+4. Set the provenance status to `owner-accepted-release-candidate` and run
+   `verifyReleaseCandidate -PreleaseTag=v<version>` with all exact candidate
    JAR Gradle properties.
-7. Merge the reviewed commit, create an annotated `v<version>` tag at that
+5. Merge the reviewed commit, create an annotated `v<version>` tag at that
    commit, and let `.github/workflows/release.yml` publish.
-8. Compare every downloaded release asset to the locally accepted bytes.
-9. Update the private root portfolio, queue, and `workspace.json` in a separate
+6. Compare every downloaded release asset to the locally accepted bytes.
+7. Update the private root portfolio, queue, and `workspace.json` in a separate
    orchestration commit.
 
 The tag must exactly equal `v<addon_version>`. No release authorizes production

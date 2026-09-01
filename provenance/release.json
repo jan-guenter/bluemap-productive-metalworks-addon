@@ -1,80 +1,80 @@
 {
   "schema_version": 1,
-  "status": "owner-accepted-release-candidate",
-  "version": "0.1.0-alpha.1",
-  "release_date": "2026-08-26",
+  "status": "unpublished-migration-candidate",
+  "published": false,
+  "version": "0.1.0-alpha.2",
+  "release_date": "2026-09-01",
   "repository": "https://github.com/jan-guenter/bluemap-productive-metalworks-addon",
-  "tag": "v0.1.0-alpha.1",
-  "maven_coordinate": "io.github.jan-guenter:bluemap-productive-metalworks-addon:0.1.0-alpha.1",
-  "owner_accepted_staging": {
-    "accepted_at": "2026-08-26",
-    "commit": "b7279a350f1c2f787884e1ca75f097b5924423d9",
-    "tree": "34a345ec3420bd6ca21ba8e90a9752e092bc8061",
-    "production_jar_size": 118244,
-    "production_jar_sha256": "f0298ec512c98412088353221fcbf9a525ec52656dec95ae4c46addc43fb8a55",
-    "accepted_at_map": "productivemetalworks_review",
-    "visual_acceptance": true
+  "tag": "v0.1.0-alpha.2",
+  "maven_coordinate": "io.github.jan-guenter:bluemap-productive-metalworks-addon:0.1.0-alpha.2",
+  "bluemap": {
+    "version": "5.22-feature.backport-5.23-stateless-java-web-server-46",
+    "commit": "7e07f4e74ec1e92a6ead9aa1e66054af3e133aac",
+    "api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971"
   },
-  "accepted_staging_entries": {
-    "path": "provenance/accepted-staging-entries.sha256",
-    "entry_count": 36,
-    "sha256": "07e6a512557896ccb268257d4cabed0a4c703fe02fa519dfb1c1ca3d3f5baa08"
+  "adapter_api": {
+    "version": "0.1.0-alpha.2",
+    "commit": "e81f08bc4bfbf02d810ec8949a019130e2e61634",
+    "source_tree": "2f974c9bb2ba13888d69682f86f30f58922d30eb",
+    "source_files_compiled": 4,
+    "module_jar_installed": false,
+    "module_jar_bundled": false,
+    "module_jar_nested": false,
+    "local_adapter_package": "io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523"
   },
-  "final_release_artifacts": {
+  "baseline_release": {
+    "version": "0.1.0-alpha.1",
+    "tag": "v0.1.0-alpha.1",
+    "commit": "f7706461f5500067d610c0c2e5ed97371f16af81",
+    "production_jar_size": 118243,
+    "production_jar_sha256": "7b7890329de51230a8a455a45acac83e860932fda12b3e685d42522b138df0cd",
+    "owner_visual_acceptance": "2026-08-26"
+  },
+  "candidate_artifacts": {
     "production_jar": {
-      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.1.jar",
-      "size": 118243,
-      "sha256": "7b7890329de51230a8a455a45acac83e860932fda12b3e685d42522b138df0cd"
+      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.2.jar",
+      "size": 122988,
+      "sha256": "712bd40aa0918d091988cf4472c3b7c6111419d577ea7282a11648f19b1610c4"
     },
     "sources_jar": {
-      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.1-sources.jar",
-      "size": 85611,
-      "sha256": "5770bab905b956e8fa3a02443a81ef44bd80d9a2ab4ac552623b34eb1f6995be"
+      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.2-sources.jar",
+      "size": 90446,
+      "sha256": "f18b9ce9f96c6491a12233444515c62939b3357ca8e77669f77c64a1e202dd63"
     },
     "pom": {
-      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.1.pom",
+      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.2.pom",
       "size": 1401,
-      "sha256": "808c63a8c99a292ebf406516835223d027c8b9d7ea4814271660275b9d753778"
+      "sha256": "65eb67b0fd453f56921045a6fc9a0ef6860503f184cca489d649e26317d0fe94"
     },
     "gradle_module": {
-      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.1.module.json",
+      "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.2.module.json",
       "size": 2917,
-      "sha256": "df455c1cfe90dd0bfd3f226258283fa7babc5cae1fdf9dffd1ae689403cfa9d6"
+      "sha256": "132f06fe32107429d0258d6d9d28103dfdc07730b2fab192d0a58c25cdc62bdd"
     }
   },
-  "staged_equivalence": {
-    "entry_manifest": "provenance/accepted-staging-entries.sha256",
-    "identical_non_manifest_entries": 36,
-    "whole_jar_byte_identical": false,
-    "only_changed_entry_bytes": "META-INF/MANIFEST.MF",
-    "change_reason": "Implementation-Version changed from the accepted SNAPSHOT marker to the final release version."
-  },
-  "gallery": {
-    "archive_file_name": "productivemetalworks-gallery.zip",
-    "size": 2821,
-    "sha256": "e6b01bc0790b5ea717e1651463c648284d5ba2077eaa395ff087b9bbbb221bb3",
-    "review_cases": 19,
-    "published_as_release_asset": false
+  "preserved_contract": {
+    "gallery_review_cases": 19,
+    "molten_fluid_profiles": 44,
+    "gallery_sources_changed": false,
+    "profiles_and_resources_changed": false,
+    "renderer_behavior_changed": false,
+    "stock_fallback_changed": false
   },
   "ephemeral_ci_inputs": {
-    "productiveMetalworks": {
-      "curseforge_project": 1184570,
-      "curseforge_file": 8558526,
-      "size": 3033210,
-      "sha256": "100132424f9659b76fd1326a8f0068a58b91d6d94351d47484b5b9cee394e812"
-    },
-    "embedded_productive_lib": {
-      "path": "META-INF/jarjar/productivelib-1.21.1-0.2.0.jar",
-      "size": 154249,
-      "sha256": "6671c8aa783d5fc3056b5a24b041edcf51b9c774b68fd85a790ae3346e4550e7"
-    },
-    "policy": "Downloaded only into the ephemeral runner, verified before use, and never bundled or uploaded."
+    "productive_metalworks_size": 3033210,
+    "productive_metalworks_sha256": "100132424f9659b76fd1326a8f0068a58b91d6d94351d47484b5b9cee394e812",
+    "embedded_productive_lib_size": 154249,
+    "embedded_productive_lib_sha256": "6671c8aa783d5fc3056b5a24b041edcf51b9c774b68fd85a790ae3346e4550e7"
   },
   "verification": {
-    "production_jar_exact_byte_gate": true,
-    "sources_jar_exact_byte_gate": true,
-    "publication_metadata_exact_byte_gate": true,
-    "staged_equivalence_gate": true,
-    "exact_input_gate": true
+    "exact_input_gate": true,
+    "adapter_api_gitlink_and_source_tree_gate": true,
+    "production_archive_boundary_gate": true,
+    "sources_archive_boundary_gate": true,
+    "local_candidate_artifact_identity_gate": true,
+    "authoritative_pr_ci_reproduction": false,
+    "local_gradle_version": "9.6.1",
+    "local_java_runtime": "21.0.12.1+1",
+    "exact_alpha_2_runtime_review": false
   }
 }
