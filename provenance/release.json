@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "unpublished-migration-candidate",
+  "status": "owner-accepted-release-candidate",
   "published": false,
   "version": "0.1.0-alpha.2",
   "release_date": "2026-09-01",
@@ -29,6 +29,32 @@
     "production_jar_size": 118243,
     "production_jar_sha256": "7b7890329de51230a8a455a45acac83e860932fda12b3e685d42522b138df0cd",
     "owner_visual_acceptance": "2026-08-26"
+  },
+  "owner_accepted_staging": {
+    "visual_acceptance": true,
+    "accepted_on": "2026-09-01",
+    "scope": "Owner accepted the Productive Metalworks gallery in the combined 51-add-on BlueMap 5.23 integration review. The accepted renderer, profile, textures, and gallery are the alpha.2 candidate bytes; the aggregate staging JAR differs only at the integration entrypoint overlay.",
+    "integration_run": "bluemap-atmons-integration-20260901-next-review-batch-v38",
+    "candidate_manifest": {
+      "sha256": "6d27c380945775bcec6a93bb510263e2aaaf23f8033fddd934bf3191634c120d",
+      "local_candidate_base_source_commit": "1f582e3bd287b2f9b1ddb319357161bb75602706",
+      "local_candidate_base_source_tree": "c3116e52cca8d21edf6858e1b5f03d2a3ca384ef",
+      "local_candidate_base_artifact": {
+        "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.2.jar",
+        "size": 122988,
+        "sha256": "712bd40aa0918d091988cf4472c3b7c6111419d577ea7282a11648f19b1610c4"
+      },
+      "aggregate_staging_artifact": {
+        "file_name": "bluemap-productive-metalworks-addon-0.1.0-alpha.1.jar",
+        "size": 123364,
+        "sha256": "59db3d74ec68eecba5f529ad54d66e55b9b4b667ba1fc61f049a1f26187dd387"
+      }
+    },
+    "browser_capture": {
+      "file_name": "bluemap-v38-productive-metalworks.png",
+      "size": 711333,
+      "sha256": "2bd1726777867239a6b958a11d7743645efabb3eb4cd6489293520933b390352"
+    }
   },
   "candidate_artifacts": {
     "production_jar": {
@@ -72,9 +98,11 @@
     "production_archive_boundary_gate": true,
     "sources_archive_boundary_gate": true,
     "local_candidate_artifact_identity_gate": true,
-    "authoritative_pr_ci_reproduction": false,
+    "authoritative_pr_ci_reproduction": true,
+    "authoritative_pr_ci_run_id": 33530610055,
+    "authoritative_pr_ci_head_commit": "1f582e3bd287b2f9b1ddb319357161bb75602706",
     "local_gradle_version": "9.6.1",
     "local_java_runtime": "21.0.12.1+1",
-    "exact_alpha_2_runtime_review": false
+    "exact_alpha_2_runtime_review": true
   }
 }

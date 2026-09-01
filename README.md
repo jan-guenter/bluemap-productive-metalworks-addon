@@ -3,7 +3,7 @@
 A Java 21 BlueMap add-on for the exact `productivemetalworks-1.21.1-1.15.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: unpublished `0.1.0-alpha.2` BlueMap 5.23 migration candidate. It
+Status: owner-accepted `0.1.0-alpha.2` BlueMap 5.23 release candidate. It
 preserves the owner-accepted alpha.1 renderer, profile, gallery, and fallback
 behavior while moving shared compatibility helpers into the pinned Adapter API.
 The exact production JAR is 122,988 bytes with SHA-256
