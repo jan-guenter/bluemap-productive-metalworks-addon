@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 
-package io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522;
+package io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

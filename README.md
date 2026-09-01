@@ -3,17 +3,17 @@
 A Java 21 BlueMap add-on for the exact `productivemetalworks-1.21.1-1.15.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: owner-accepted `0.1.0-alpha.1` release candidate. The exact artifact
-gate and BlueMap 5.22 adapter restore the stable client-rendered Productive
-Metalworks layers while loading every texture from the operator-installed mod.
+Status: unpublished `0.1.0-alpha.2` BlueMap 5.23 migration candidate. It
+preserves the owner-accepted alpha.1 renderer, profile, gallery, and fallback
+behavior while moving shared compatibility helpers into the pinned Adapter API.
 
 ## Build
 
 Clone with `--recurse-submodules`, or initialize an existing checkout with
-`git submodule update --init --recursive -- tooling/bluemap-addon-toolkit`.
-The settings preflight accepts only the committed toolkit gitlink at commit
-`6cd34a8368cc4ee8628fbe830a90ec5b14960629` and rejects an uninitialized,
-changed, or dirty toolkit checkout.
+`git submodule update --init --recursive -- tooling/bluemap-addon-toolkit
+modules/bluemap-addon-adapter-api`. The settings preflight accepts only the
+committed toolkit and Adapter API pins and rejects uninitialized, changed, or
+dirty submodule checkouts.
 
 ```bash
 gradle --no-daemon -PbluemapSourcePath=../bluemap-backport clean check build

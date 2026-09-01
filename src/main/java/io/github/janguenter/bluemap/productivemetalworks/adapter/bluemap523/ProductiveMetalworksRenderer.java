@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 
-package io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522;
+package io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523;
 
 import de.bluecolored.bluemap.core.map.TextureGallery;
 import de.bluecolored.bluemap.core.map.hires.MaxCapacityReachedException;
@@ -15,21 +15,21 @@ import de.bluecolored.bluemap.core.util.math.Color;
 import de.bluecolored.bluemap.core.world.block.BlockNeighborhood;
 import de.bluecolored.bluemap.core.world.block.ExtendedBlock;
 import io.github.janguenter.bluemap.productivemetalworks.activation.AddonRuntime;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Capacitor;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Casting;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Controller;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Fluid;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.MultiData;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Position;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Tank;
-import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap522
+import io.github.janguenter.bluemap.productivemetalworks.adapter.bluemap523
         .ProductiveMetalworksBlockEntityData.Tap;
 
 import java.util.IdentityHashMap;
